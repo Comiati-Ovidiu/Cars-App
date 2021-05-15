@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Redirect } from "react-router-dom";
 import _ from "lodash"
 import {
   CssBaseline,
@@ -22,6 +22,7 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <>
+        <Redirect from="/" to="/cars" />
         <AppRoute
             path="/cars"
             render={() => {
